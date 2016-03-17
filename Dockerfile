@@ -1,4 +1,4 @@
-FROM drupalateam/prod-server-base:latest
+FROM drupalateam/prod-server-base:no-memcache-or-varnish
 
 ENV REBUILD yes
 
