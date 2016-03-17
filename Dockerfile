@@ -1,4 +1,4 @@
-FROM kricker/prod-server-base:latest
+FROM drupalateam/prod-server-base:latest
 
 ENV REBUILD yes
 
@@ -51,7 +51,5 @@ RUN chmod -R 777 /src/config
 
 # Define default command.
 CMD sh /root/server-base-start.sh && \
-    sh /root/prod-server-base-start.sh && \
-    sh /root/varnish-start.sh & \
     /bin/bash /src/config/drupal-base-start.sh && \
     /sbin/my_init
